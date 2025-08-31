@@ -6,3 +6,7 @@ print("imported")
 # load dataframe
 dataframe = pd.read_csv("../data/questions.csv", sep="|", names=["category", "question"])
 
+# Get just the questions for clustering
+questions = dataframe['question'].tolist()
+print("done")
+

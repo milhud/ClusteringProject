@@ -4,28 +4,29 @@ def parse_questions(raw_text):
     lines = raw_text.strip().split("\n")
     questions_data = []
     prevQuestion = False
-
-    for line in lines:
+    
+    i = 0
+    while i < len(lines):
+        line = lines[i]
 
         # skip empty lines
         if line.strip() == "":
-            continue
-        elif prevQuestion:
-            prevQuestion = False
+            i += 1
             continue
 
         # this is the category; doesn't end with ? or .
         if not line[0].isspace():
             current_category = line.strip()
             print("New Category: ", current_category)
+            i += 1
+            continue
 
         # this is the question
-        elif not prevQuestion:
-            question = line.strip()
-            questions_data.append([current_category, question])
-            prevQuestion = True
-        
         else:
+            question = line.strip()
+            answer = lines[i+1].strip()
+            questions_data.append([current_category, question, answer])
+            i += 2
             continue
 
     return questions_data
