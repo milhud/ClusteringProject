@@ -128,7 +128,6 @@ Time Series Analysis
     How do you handle stationarity in time series?
         Techniques include differencing, detrending, and transformation (e.g., log, Box-Cox) to stabilize mean and variance.
 
-Here’s a continued list of advanced topics for questions 51-100, covering ensemble techniques, model deployment, interpretability, hyperparameter tuning, edge AI, ethics in AI, transformers, NLP, AutoML, and practical case-based questions.
 Ensemble Methods
 
     What is ensemble learning, and why is it effective?
@@ -241,5 +240,5 @@ Natural Language Processing (NLP)
         Transfer learning adapts knowledge from large, pre-trained models, while fine-tuning customizes them for specific tasks.
     What is AutoML, and what are its benefits in ML?
         AutoML automates model selection, tuning, and deployment, democratizing access to ML and reducing time on repetitive tasks.
-    What are ethical considerations in ML? 
+    What are ethical considerations in ML?
         Ethical ML considers fairness, transparency, accountability, data privacy, and avoiding harm, especially in high-stakes applications.
