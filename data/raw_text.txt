@@ -1,0 +1,245 @@
+Basic Machine Learning Concepts
+
+    What is Machine Learning?
+        ML is a branch of AI where models learn from data to make predictions or decisions without being explicitly programmed.
+    What’s the difference between AI, ML, and Deep Learning?
+        AI encompasses all intelligent systems; ML is a subset of AI focused on pattern learning, and Deep Learning is a subset of ML that uses neural networks.
+    Explain the bias-variance tradeoff.
+        Bias is error due to assumptions, while variance is error due to sensitivity to data fluctuations. Reducing one often increases the other, so a balance is sought.
+    What are the main types of ML algorithms?
+        Supervised, unsupervised, and reinforcement learning.
+    How does cross-validation help in ML?
+        Cross-validation helps assess a model’s performance on unseen data by creating multiple training and test splits, reducing overfitting.
+
+Data Preprocessing and Feature Engineering
+
+    Why is feature scaling important?
+        It standardizes ranges, preventing features with larger scales from dominating the model, especially in distance-based algorithms.
+    Explain one-hot encoding.
+        One-hot encoding transforms categorical variables into binary columns for each category, making them numeric for ML models.
+    What is PCA?
+        Principal Component Analysis is a dimensionality reduction technique that projects data into components capturing the most variance.
+    How do you handle missing data?
+        Common strategies include mean/mode imputation, deletion, or prediction using other features.
+    Explain feature selection and feature extraction.
+        Feature selection picks important features, while feature extraction creates new features, often via transformation (e.g., PCA).
+
+Supervised Learning Algorithms
+
+    What are linear regression assumptions?
+        Linearity, independence, homoscedasticity, normal distribution of residuals, and no multicollinearity.
+    What is logistic regression, and how does it work?
+        A classification algorithm that models probability of outcomes using a sigmoid function.
+    Explain decision tree pruning.
+        Pruning removes low-importance nodes to prevent overfitting, often based on thresholds.
+    What is an SVM, and what’s a support vector?
+        Support Vector Machines classify by finding a hyperplane maximizing margin; support vectors are data points closest to the hyperplane.
+    What is k-nearest neighbors (KNN)?
+        KNN classifies based on the majority label of its closest k neighbors.
+
+Unsupervised Learning Algorithms
+
+    Explain K-means clustering.
+        Partitions data into k clusters, where each cluster minimizes distance to its centroid.
+    What is hierarchical clustering?
+        Builds a hierarchy of clusters, merging or splitting iteratively based on similarity.
+    What is DBSCAN?
+        Density-Based Spatial Clustering detects clusters based on density of data points, handling noise well.
+    What is Latent Dirichlet Allocation (LDA)?
+        A generative model for topic modeling that identifies topics from a collection of documents.
+    How does Gaussian Mixture Model (GMM) work?
+        Models data as a mixture of multiple Gaussian distributions, useful for soft clustering.
+
+Neural Networks and Deep Learning
+
+    What is a neural network?
+        A network of connected nodes (neurons) that mimic human brain functioning to detect patterns and learn from data.
+    Explain backpropagation.
+        A method to adjust weights by calculating the error gradient and propagating it backward through the network.
+    What is the ReLU activation function?
+        Rectified Linear Unit outputs zero for negative inputs and linear for positives, improving gradient flow.
+    What is dropout in neural networks?
+        A regularization method that randomly deactivates neurons during training to prevent overfitting.
+    What is a convolutional neural network (CNN)?
+        A deep network mainly used in image processing, employing convolution layers to capture spatial hierarchies.
+
+Advanced Deep Learning Concepts
+
+    What is transfer learning?
+        Leveraging a pre-trained model on a new task, often fine-tuning it on domain-specific data.
+    Explain RNNs and LSTMs.
+        Recurrent Neural Networks process sequences by preserving temporal information; LSTMs add gating mechanisms to handle long dependencies.
+    What is a GAN?
+        Generative Adversarial Network: a model generating new data by pitting two networks, generator and discriminator, against each other.
+    What is batch normalization?
+        Normalizes inputs of each layer to stabilize learning and improve convergence speed.
+    What is the vanishing gradient problem?
+        Occurs in deep networks where gradients shrink, making learning in early layers slow; often addressed by ReLU activation or residual connections.
+
+Model Evaluation and Metrics
+
+    What are precision and recall?
+        Precision measures accuracy of positive predictions, while recall measures coverage of actual positives.
+    Explain ROC-AUC score.
+        ROC-AUC measures classification performance; the area under the ROC curve (AUC) indicates discrimination power.
+    What is an F1 score, and why use it?
+        Harmonic mean of precision and recall, useful in imbalanced datasets where both metrics matter.
+    What’s the difference between accuracy and error rate?
+        Accuracy is the proportion of correct predictions; error rate is the proportion of incorrect predictions.
+    How do you handle class imbalance?
+        Techniques include resampling, synthetic data generation (e.g., SMOTE), and adjusting evaluation metrics.
+
+Model Optimization and Hyperparameter Tuning
+
+    What is grid search?
+        A method to exhaustively test hyperparameter combinations and select the best one.
+    What’s the difference between grid search and random search?
+        Grid search tests all combinations, while random search selects a random subset, often speeding up the process.
+    What is early stopping?
+        Stops training when validation error increases to prevent overfitting.
+    Explain the role of learning rate in optimization.
+        Controls step size in gradient descent; too high may overshoot, too low may slow convergence.
+    What is Bayesian optimization?
+        A method that models the objective function to identify the best parameters with fewer evaluations.
+
+Reinforcement Learning
+
+    What is reinforcement learning?
+        A type of learning where agents learn by receiving rewards or penalties from interactions with an environment.
+    Explain the exploration-exploitation tradeoff.
+        Balancing between exploring new actions and exploiting known profitable ones.
+    What is a Markov Decision Process?
+        A mathematical framework for decision-making in reinforcement learning, defining states, actions, rewards, and transitions.
+    What is Q-learning?
+        An off-policy RL algorithm that learns an action-value function predicting the expected reward of actions.
+    Explain deep Q-networks (DQNs).
+        Combines Q-learning with deep neural networks to handle high-dimensional input spaces.
+
+Time Series Analysis
+
+    What is time series analysis?
+        Analyzing data points ordered in time to detect patterns, trends, or seasonality.
+    Explain ARIMA modeling.
+        A forecasting model combining autoregression, differencing, and moving average for non-stationary time series.
+    What is seasonality in time series?
+        Regular, repeating patterns within data over specific time intervals, e.g., daily, monthly.
+    What is exponential smoothing?
+        A technique that applies decreasing weights to past observations, emphasizing more recent data.
+    How do you handle stationarity in time series?
+        Techniques include differencing, detrending, and transformation (e.g., log, Box-Cox) to stabilize mean and variance.
+
+Here’s a continued list of advanced topics for questions 51-100, covering ensemble techniques, model deployment, interpretability, hyperparameter tuning, edge AI, ethics in AI, transformers, NLP, AutoML, and practical case-based questions.
+Ensemble Methods
+
+    What is ensemble learning, and why is it effective?
+        Ensemble learning combines multiple models to improve accuracy and robustness. It reduces variance, bias, or both by aggregating different predictions.
+    Explain bagging and provide an example.
+        Bagging (Bootstrap Aggregating) creates multiple subsets of the data, trains individual models, and averages their predictions. Random Forest is a common example.
+    What is boosting, and how does it differ from bagging?
+        Boosting sequentially builds models, where each new model corrects the errors of the previous one. Unlike bagging, it focuses on reducing bias and improves performance on complex data.
+    Explain the AdaBoost algorithm.
+        AdaBoost adjusts weights of training samples, increasing the weight of misclassified instances so that subsequent models focus on difficult cases.
+    What is XGBoost, and why is it popular?
+        XGBoost is an optimized gradient boosting library with speed, accuracy, and scalability advantages, making it popular in competitions and real-world applications.
+    What is stacking in ensemble learning?
+        Stacking trains multiple models (level-0), then combines their predictions using a meta-model (level-1) to improve prediction accuracy.
+    What are the limitations of ensemble methods?
+        Ensemble models can be computationally expensive, harder to interpret, and risk overfitting if not properly tuned.
+    Explain LightGBM and its advantages.
+        LightGBM is a gradient boosting framework that uses histogram-based learning for faster training, making it ideal for large datasets.
+    Describe CatBoost and how it handles categorical features.
+        CatBoost is a gradient boosting library that natively supports categorical features without one-hot encoding, improving both performance and speed.
+    What is the difference between soft and hard voting in ensemble methods?
+        Hard voting takes the majority class label from multiple models, while soft voting averages probabilities and selects the highest probability.
+
+Cloud Deployment Strategies
+
+    What are common platforms for deploying ML models?
+        AWS SageMaker, Google AI Platform, Azure ML, and container orchestration platforms like Kubernetes.
+    Explain serverless deployment in ML.
+        Serverless deployment allows model hosting without managing infrastructure, scaling automatically to handle requests (e.g., AWS Lambda with ML inference).
+    What is model versioning and why is it important?
+        Model versioning tracks different versions of models for reproducibility, rollback, and gradual updates, crucial in production environments.
+    Explain the role of Docker in ML deployment.
+        Docker packages ML models with their dependencies, ensuring consistency and portability across environments.
+    What is Kubernetes, and how is it used in ML?
+        Kubernetes manages containerized applications at scale, useful for deploying, scaling, and updating ML models in production.
+    What is a CI/CD pipeline in ML, and how does it work?
+        A CI/CD pipeline automates model training, testing, and deployment steps, ensuring frequent, reliable updates to production models.
+    Describe edge AI and its use cases.
+        Edge AI involves deploying models on devices close to the data source (e.g., IoT), enabling real-time processing without relying on cloud infrastructure.
+    What is model monitoring and why is it necessary?
+        Model monitoring tracks performance and data drift in production, ensuring the model remains accurate over time.
+    How would you handle model drift in a deployed model?
+        Detect drift using monitoring tools, and retrain the model periodically or based on performance thresholds.
+    What are the advantages of using managed services like AWS SageMaker for deployment?
+        Managed services simplify model deployment, scaling, and monitoring, reducing infrastructure management effort.
+
+Model Interpretability
+
+    Why is interpretability important in ML?
+        Interpretability helps build trust, especially in high-stakes applications (e.g., healthcare), and aids in debugging models and meeting regulatory requirements.
+    What is SHAP, and how does it work?
+        SHAP (SHapley Additive exPlanations) is an interpretability method that assigns each feature an importance value for a given prediction, based on cooperative game theory.
+    Explain LIME and its use cases.
+        LIME (Local Interpretable Model-agnostic Explanations) approximates complex models locally with simpler ones to interpret individual predictions.
+    What are partial dependence plots (PDP)?
+        PDPs show the effect of a single feature on predictions, averaging out other features, helping understand global feature impact.
+    How does an attention mechanism improve interpretability in NLP?
+        Attention assigns weights to each input word, indicating which words influence predictions, thus improving interpretability in sequence models.
+    What is counterfactual explanation in ML?
+        Counterfactuals answer “what-if” scenarios by changing input features to see how predictions change, useful for understanding model sensitivity.
+    What are surrogate models in interpretability?
+        Surrogate models are interpretable models (e.g., decision trees) trained to approximate complex models, providing interpretability at the cost of slight accuracy loss.
+    What is the difference between global and local interpretability?
+        Global interpretability explains the model as a whole, while local interpretability explains individual predictions.
+    How can decision trees aid in interpretability?
+        Decision trees visually show feature splits and decision paths, making it easy to understand the logic behind predictions.
+    How would you interpret a black-box model in production?
+        Use model-agnostic methods like SHAP, LIME, and counterfactuals, alongside feature importance scores and PDPs.
+
+Hyperparameter Optimization
+
+    What is hyperparameter tuning?
+        Hyperparameter tuning is the process of optimizing model parameters not learned during training, impacting model performance.
+    Explain the difference between hyperparameters and model parameters.
+        Hyperparameters are external settings (e.g., learning rate), while model parameters (e.g., weights) are learned from data.
+    What is Optuna, and how does it work?
+        Optuna is a hyperparameter optimization library that uses Bayesian and other optimization techniques, efficiently searching parameter space.
+    Explain Bayesian optimization in hyperparameter tuning.
+        Bayesian optimization builds a probabilistic model of the objective function to guide the search for optimal hyperparameters.
+    What is the advantage of Hyperband over traditional tuning methods?
+        Hyperband allocates resources dynamically, quickly discarding poor-performing trials and focusing on promising ones.
+    Describe grid search and random search.
+        Grid search exhaustively tests parameter combinations, while random search samples randomly, often more efficient for large spaces.
+    What is early stopping in hyperparameter tuning?
+        Early stopping halts training if validation performance stops improving, preventing overfitting and saving resources.
+    How would you set up hyperparameter tuning in cross-validation?
+        Combine cross-validation with tuning to find the best parameters by averaging scores over multiple folds.
+    When should you use automated hyperparameter tuning?
+        Automated tuning is ideal for complex models with numerous parameters and large parameter spaces.
+    What are the downsides of hyperparameter tuning?
+        It can be computationally expensive, time-consuming, and may lead to overfitting on validation data if not managed properly.
+
+Natural Language Processing (NLP)
+
+    What is tokenization, and why is it important in NLP?
+        Tokenization splits text into individual units (words, sentences) for processing, essential for model input and semantic understanding.
+    Explain word embeddings.
+        Word embeddings map words to vector spaces, capturing semantic relationships, with popular techniques like Word2Vec and GloVe.
+    What are transformers in NLP?
+        Transformers are models using attention mechanisms to handle long-range dependencies in sequences, foundational to BERT and GPT.
+    What is BERT, and how is it trained?
+        BERT (Bidirectional Encoder Representations from Transformers) is trained on masked language modeling, capturing context from both sides.
+    Explain the concept of attention in NLP.
+        Attention mechanisms assign weights to each token in a sequence, identifying the most influential tokens in making predictions.
+    What is the difference between sequence-to-sequence and sequence classification?
+        Sequence-to-sequence tasks output sequences (e.g., translation), while sequence classification outputs labels (e.g., sentiment).
+    What is fine-tuning in the context of transformers?
+        Fine-tuning adjusts a pre-trained transformer to a specific task, often with fewer resources and data.
+    How do transfer learning and fine-tuning work in NLP?
+        Transfer learning adapts knowledge from large, pre-trained models, while fine-tuning customizes them for specific tasks.
+    What is AutoML, and what are its benefits in ML?
+        AutoML automates model selection, tuning, and deployment, democratizing access to ML and reducing time on repetitive tasks.
+    What are ethical considerations in ML? 
+        Ethical ML considers fairness, transparency, accountability, data privacy, and avoiding harm, especially in high-stakes applications.
