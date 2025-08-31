@@ -32,7 +32,7 @@ def parse_questions(raw_text):
     return questions_data
 
 # open and process the file
-file = open("../data/raw_text.txt", "r", encoding="utf-8") # encoding: fix due to weird double quotes?
+file = open("data/raw_text.txt", "r", encoding="utf-8") # encoding: fix due to weird double quotes?
 text = file.read()
 
 # parse questions, convert to pandas dataframe
@@ -40,7 +40,7 @@ questions = parse_questions(text)
 dataframe = pd.DataFrame(questions)
 
 # save as CSV, close file
-dataframe.to_csv("../data/questions.csv", index=False, sep="|") # some questions have commas in them so need another separator
+dataframe.to_csv("data/questions.csv", index=False, sep="|") # some questions have commas in them so need another separator
 file.close()
 
 # confirmation message
