@@ -14,7 +14,7 @@ def evaluate_clustering_detailed(topics, categories): # ground truth categories 
     clustered_percentage = (clustered / len(topics)) * 100
     
     # if all outliers just return with zeroes
-    if clustered is 0:
+    if clustered == 0:
         return 0.0, 0.0, 0.0
     
     # going to start by eliminating the outliers - first create mask
