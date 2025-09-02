@@ -1,4 +1,3 @@
-0|1|2
 Basic Machine Learning Concepts|What is Machine Learning?|ML is a branch of AI where models learn from data to make predictions or decisions without being explicitly programmed.
 Basic Machine Learning Concepts|What’s the difference between AI, ML, and Deep Learning?|AI encompasses all intelligent systems; ML is a subset of AI focused on pattern learning, and Deep Learning is a subset of ML that uses neural networks.
 Basic Machine Learning Concepts|Explain the bias-variance tradeoff.|Bias is error due to assumptions, while variance is error due to sensitivity to data fluctuations. Reducing one often increases the other, so a balance is sought.
