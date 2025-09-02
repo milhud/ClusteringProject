@@ -1,13 +1,15 @@
 from load_data import loadPreprocess # for the loadPreprocess function; returns texts, categories, and cleaned questions only
 
-
-
-def basic_supervision():
+def basic_supervision(sup=True):
     texts, categories, _ = loadPreprocess()
     
     from sklearn.preprocessing import LabelEncoder
     encoder = LabelEncoder()
-    correct = encoder.fit_transform(categories) # corret[0] -> correct for q 0
+    
+    if sup:
+        correct = encoder.fit_transform(categories) # corret[0] -> correct for q 0
+    else:
+        correct = None
 
     embedding_model = SentenceTransformer("all-mpnet-base-v2") #
 

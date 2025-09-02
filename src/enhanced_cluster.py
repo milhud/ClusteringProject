@@ -1,5 +1,5 @@
 # basically just keybert for better semantic clustering
-def enhanced_representation(): 
+def enhanced_representation(sup=True): 
 
     from load_data import loadPreprocess
     texts, categories, _ = loadPreprocess()
@@ -7,7 +7,11 @@ def enhanced_representation():
     # encode
     from sklearn.preprocessing import LabelEncoder
     encoder = LabelEncoder()
-    correct = encoder.fit_transform(categories)
+    
+    if sup: 
+        correct = encoder.fit_transform(categories)
+    else:
+        correct = None
 
     from bertopic.representation import KeyBERTInspired
     rep_model = KeyBERTInspired() # more meaningful text

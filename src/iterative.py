@@ -1,4 +1,4 @@
-def iterative():
+def iterative(sup=True):
 
     from load_data import loadPreprocess
     texts, categories, _ = loadPreprocess()
@@ -6,7 +6,11 @@ def iterative():
     # supervised first
     from sklearn.preprocessing import LabelEncoder
     encoder = LabelEncoder()
-    correct = encoder.fit_transform(categories)
+
+    if sup:
+        correct = encoder.fit_transform(categories)
+    else:
+        correct = None
     
     from sentence_transformers import SentenceTransformer
     from umap import UMAP

@@ -2,8 +2,6 @@ def bayesian():
 
     from load_data import loadPreprocess
     texts, categories, _ = loadPreprocess()
-
-   
    
     from evaluate_clustering import evaluate_clustering_detailed
 
