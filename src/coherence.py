@@ -66,7 +66,8 @@ def coherence():
             topics=topic_words,
             texts=tokenized_texts,
             dictionary=dictionary,
-            coherence='c_v'
+            coherence="c_v",
+            processes = 1
         )
         coherence_score = coherence_model.get_coherence() # get final score
         
