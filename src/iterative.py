@@ -17,7 +17,7 @@ def iterative(sup=True):
     from hdbscan import HDBSCAN
     from bertopic import BERTopic
     embedding_model = SentenceTransformer("all-mpnet-base-v2")
-    umap_model = UMAP(n_neighbors=10, n_components=15, min_dist=0.0, metric='cosine', random_state=42)
+    umap_model = UMAP(n_neighbors=10, n_components=15, min_dist=0.0, metric="cosine")
     hdbscan_model = HDBSCAN(min_cluster_size=2, min_samples=1)
     
     topic_model = BERTopic(
@@ -29,7 +29,7 @@ def iterative(sup=True):
     # run first
     topics, probs = topic_model.fit_transform(texts, y=correct)
     
-    # then process outliers
+    # then process outliers - idea kind of gleaned from this text https://arxiv.org/html/2407.17892v1
     original_outliers = sum(1 for t in topics if t == -1)
     
     if original_outliers > 0:

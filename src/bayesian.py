@@ -34,7 +34,8 @@ def bayesian():
     # Get best parameters and build final model
     best_n_neighbors, best_min_cluster_size, best_n_components, best_min_dist = result.x
     
-    retUmap = UMAP(n_neighbors=best_n_neighbors, n_components=best_n_components, min_dist=best_min_dist, metric='cosine', random_state=42)
+    # Reference BERTopic Docsc: https://maartengr.github.io/BERTopic/getting_started/parameter%20tuning/parametertuning.html#n_neighbors
+    retUmap = UMAP(n_neighbors=best_n_neighbors, n_components=best_n_components, min_dist=best_min_dist, metric="cosine")
     retHdbscan = HDBSCAN(min_cluster_size=best_min_cluster_size, min_samples=1)
     retModel = BERTopic(embedding_model=embedding, umap_model=retUmap, hdbscan_model=retHdbscan)
     

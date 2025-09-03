@@ -12,7 +12,7 @@ def kmeans():
     
     from hdbscan import HDBSCAN
     from sklearn.cluster import KMeans
-    kmeans_model = KMeans(n_clusters=all_clusters, random_state=999, n_init=10) # ten times ten clusters
+    kmeans_model = KMeans(n_clusters=all_clusters, n_init=10) # ten times ten clusters
     
     from bertopic import BERTopic
     topic_model = BERTopic(

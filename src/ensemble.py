@@ -24,7 +24,7 @@ def ensemble():
     
     # this is more aggressive clustering
     emb2 = SentenceTransformer("sentence-transformers/all-roberta-large-v1")
-    umap2 = UMAP(n_neighbors=15, n_components=20, min_dist=0.0, random_state=149) # aggressive clustering, 20 dimensions -> 15 nearest neighbors while keeping more info
+    umap2 = UMAP(n_neighbors=15, n_components=20, min_dist=0.0) # aggressive clustering, 20 dimensions -> 15 nearest neighbors while keeping more info
     hdb2 = HDBSCAN(min_cluster_size=2, min_samples=1) # smaller clusters
     model2 = BERTopic(embedding_model=emb2, umap_model=umap2, hdbscan_model=hdb2)
     topics2, _ = model2.fit_transform(texts)

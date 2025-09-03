@@ -14,7 +14,7 @@ def basic_supervision(sup=True):
     from sentence_transformers import SentenceTransformer
     embedding_model = SentenceTransformer("all-mpnet-base-v2") #
 
-    # pre trained model that is better for technical content    
+    # pre trained model that is better for technical content; https://zilliz.com/ai-faq/what-is-special-about-mpnetbased-embedding-models
     from sentence_transformers import SentenceTransformer
     embedding_model = SentenceTransformer("all-mpnet-base-v2")
 

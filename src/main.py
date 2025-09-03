@@ -19,12 +19,11 @@ pio.renderers.default = "browser"  # opens in browser
 def main():
 
     def show_visual():
-         # Show topic overview (interactive plot) - this worked!
         fig1 = model.visualize_topics()
         fig1.show()
         
-        # Show top topic words - fix the parameter
-        fig2 = model.visualize_barchart()  # Remove the parameter
+        # fails with parameter
+        fig2 = model.visualize_barchart()
         #fig2 = model.visualize_barchart(n_words=10)
         fig2.show()
 

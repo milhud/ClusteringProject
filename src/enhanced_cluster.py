@@ -1,4 +1,4 @@
-# basically just keybert for better semantic clustering
+# basically just keybert for better semantic clustering7; https://maartengr.github.io/KeyBERT/
 def enhanced_representation(sup=True): 
 
     from load_data import loadPreprocess
@@ -21,7 +21,7 @@ def enhanced_representation(sup=True):
     embedding_model = SentenceTransformer("sentence-transformers/all-roberta-large-v1") # larger, more information with more embeddings; 1024 element vectors
     
     from umap import UMAP 
-    umap_model = UMAP(n_neighbors=12, n_components=15, min_dist=0.0, metric="cosine", random_state=630) # more information -> need more dimensions to compensate
+    umap_model = UMAP(n_neighbors=12, n_components=15, min_dist=0.0, metric="cosine") # more information -> need more dimensions to compensate
 
     from hdbscan import HDBSCAN
     hdbscan_model = HDBSCAN(min_cluster_size=2, min_samples=1)  # any point near another can become a core, so more permissive clustering

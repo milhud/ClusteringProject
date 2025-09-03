@@ -27,7 +27,7 @@ def coherence():
         
         # Create models with these parameters
         umap_model = UMAP(n_neighbors=neighbors, n_components=comp, 
-                         min_dist=0.0, metric="cosine", random_state=600)
+                         min_dist=0.0, metric="cosine")
         hdbscan_model = HDBSCAN(min_cluster_size=clust_size, min_samples=1)
         
         topic_model = BERTopic(
@@ -57,7 +57,8 @@ def coherence():
         if len(topic_words) == 0:  
             continue # would be none
         
-        # Prepare data for coherence calculation
+
+        # referencing this github issue https://github.com/MaartenGr/BERTopic/issues/90
         tokenized_texts = [text.split() for text in texts]
         dictionary = Dictionary(tokenized_texts)
         
