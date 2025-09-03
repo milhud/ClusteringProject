@@ -1,0 +1,12 @@
+bertopic==0.17.3
+gensim==4.3.3
+hdbscan==0.8.40
+matplotlib==3.10.6
+numpy==2.3.2
+pandas==2.3.2
+plotly==6.3.0
+scikit_learn==1.7.1
+scikit_optimize==0.10.2
+sentence_transformers==5.1.0
+spacy==3.8.7
+umap_learn==0.5.9.post2
